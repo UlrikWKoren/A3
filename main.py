@@ -1,6 +1,9 @@
+import streamlit as st
 import folium
+from streamlit_folium import folium_static
 
-import folium
+
+st.title('Winemap')
 
 
 m = folium.Map(location=[59.911491, 10.757933])
@@ -15,3 +18,6 @@ circle = folium.Circle(
 ).add_to(m)
 
 m.save("index.html")
+
+folium_static(m)
+
